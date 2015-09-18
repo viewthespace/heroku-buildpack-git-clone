@@ -4,7 +4,7 @@ BUILD_DIR=$1
 ENV_DIR=$3
 
 
-GIT_PARENT_DIR=$CACHE_DIR/tmp/deploy
+GIT_PARENT_DIR=$BUILD_DIR/vendor/deploy
 GIT_URL=`cat $ENV_DIR/GIT_URL`
 
 #start from scratch
@@ -12,7 +12,7 @@ rm -r -f $GIT_PARENT_DIR
 
 mkdir -p $GIT_PARENT_DIR
 
-echo "-----> cloning git repo"
+echo "-----> cloning git repo to $GIT_PARENT_DIR"
 cd $GIT_PARENT_DIR
 git clone $GIT_URL
 echo "-----> done cloning git repo"
