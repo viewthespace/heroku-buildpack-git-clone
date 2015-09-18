@@ -5,7 +5,7 @@ ENV_DIR=$3
 
 
 GIT_PARENT_DIR=$BUILD_DIR/tmp/deploy
-GIT_URL=`cat $ENV_DIR/$GIT_URL`
+GIT_URL=`cat $ENV_DIR/GIT_URL`
 
 #start from scratch
 rm -r -f $GIT_PARENT_DIR
